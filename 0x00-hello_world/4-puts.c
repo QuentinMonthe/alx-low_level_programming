@@ -1,8 +1,9 @@
+/**
+ * Program : This program print text with using the function puts
+ */
 #include <stdio.h>
 
 /**
- * The program print text with using the function puts
- *
  * main - Entry point 
  *
  * Return: Alwals 0 (Success)
