@@ -1,10 +1,12 @@
-/**
- * Program : This program print text with using the function puts
+/*
+ * File: 4-puts.c
+ * Auth: Qunetin Monthe
  */
+
 #include <stdio.h>
 
 /**
- * main - Entry point 
+ * main - This program print text with using the function puts 
  *
  * Return: Alwals 0 (Success)
  */
