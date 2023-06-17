@@ -6,8 +6,7 @@
 #include <stdio.h>
 
 /**
- * main - This program print text with using the function puts. 
- *
+ * main - This program print text with using the function puts.
  * Return: Always 0 (Success).
  */
 int main(void)
