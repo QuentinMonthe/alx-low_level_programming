@@ -4,6 +4,7 @@
  */
 
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - This program print text with not using the function printf or puts.
