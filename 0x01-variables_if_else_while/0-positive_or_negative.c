@@ -7,10 +7,12 @@
 #include <time.h>
 #include <stdio.h>
 
-/* 
- * main - Entry of the program
- * Return: Always 0 (Success).
+/**
+ * main - Entry part of the program
+ *
+ * Return: Always return 0
  */
+
 int main(void)
 {
 	int n;
