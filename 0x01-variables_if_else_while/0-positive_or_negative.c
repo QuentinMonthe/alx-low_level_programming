@@ -1,7 +1,8 @@
 /*
  * File: 0-positive_or_negative.c
  * Auth: Quentin Monthe
- */ 
+ */
+
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
