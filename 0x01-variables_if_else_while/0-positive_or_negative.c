@@ -1,5 +1,5 @@
 /*
- * File: 0-positive_or_negative.c
+ * File: 0-positive_or_negative
  * Auth: Quentin Monthe
  */
 
@@ -7,9 +7,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
- * main - Entry point of the program
- * Description: using the main function for return the sign of a random number
+/* 
+ * main - Entry of the program
  * Return: Always 0 (Success).
  */
 int main(void)
