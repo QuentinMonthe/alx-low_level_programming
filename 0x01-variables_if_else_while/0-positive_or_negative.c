@@ -8,8 +8,7 @@
 #include <stdio.h>
 
 /*
- * betty style doc for function main goes there
- * main: This program print if the number is postive, zero, or negative.
+ * main - Entry point of the program
  * Description: using the main function for return the sign of a random number
  * Return: Always 0 (Success).
  */
