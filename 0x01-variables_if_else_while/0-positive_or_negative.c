@@ -8,7 +8,9 @@
 #include <stdio.h>
 
 /*
- * main - This program generate a random number and print it sign.
+ * main - This program print if the number is postive, zero, or negative.
+ * 
+ * Description: using the main function for return the sign of a random number
  * Return: Always 0 (Success).
  */
 int main(void)
