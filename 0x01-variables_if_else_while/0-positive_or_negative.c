@@ -2,7 +2,6 @@
  * File: 0-positive_or_negative.c
  * Auth: Quentin Monthe
  */ 
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
@@ -26,7 +25,7 @@ int main(void)
 		if (n > 0)
 		{
 			printf("%d is positive\n", n);
-		} else 
+		} else
 			printf("%d is negative\n", n);
 	return (0);
 }
