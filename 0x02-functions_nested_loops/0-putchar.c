@@ -15,9 +15,9 @@ int main(void)
 
 	while (letters[n] != '\0')
 	{
-		putchar(letters[n]);
+		_putchar(letters[n]);
 		n++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
