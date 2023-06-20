@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include"main.h"
 
 /**
  * main - Entry part of the program
@@ -10,6 +10,14 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char letters[] = "_putchar";
+	int n = 0;
+
+	while (letters[n] != '\0')
+	{
+		putchar(letters[n]);
+		n++;
+	}
+	putchar('\n');
 	return (0);
 }
