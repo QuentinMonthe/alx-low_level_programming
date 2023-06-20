@@ -2,6 +2,7 @@
 
 /**
  * _islower - This function checks for lowercase character
+ *@c: It is the ASCII value of char variable
  *
  * Return: 1 if the input value is lowercase and 0 for another values
  */
