@@ -5,7 +5,7 @@
 /**
  * main - Entry part of the program
  *
- * Description: This program print all possible combinations of 
+ * Description: This program print all possible combinations of
  * two two-digit numbers.
  *
  * Return: Always return 0
@@ -13,39 +13,27 @@
 
 int main(void)
 {
-	int n = 0;
-	int k = 0;
-	int p = 0;
-	int a = 1
+	int i;
+	int i;
 
-	while (n <= 9)
+	for (i = 0; i < 100; i++)
 	{
-		k = n + 1;
-		while (k <= 9)
+		for (j = 0; j < 100; j++)
 		{
-			p = k + 1;
-			while (p <= 9)
+			if (i < j)
 			{
-				a = p + 1;
-				while (a <= 9)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					putchar(n + '0');
-					putchar(k + '0');
+					putchar(',');
 					putchar(' ');
-					putchar(p + '0');
-					putchar(a + '0');
-					if (n <= 9 && k <= 8)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					a++;
 				}
-				p++;
 			}
-			k++;
 		}
-		n++;
 	}
 	putchar('\n');
 	return (0);
