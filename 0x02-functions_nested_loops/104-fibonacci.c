@@ -41,7 +41,7 @@ int main(void)
 		a1 = b1 - a1;
 		a2 = c - a2;
 		printf(", %ld", b1 + c / limit);
-		printf("%ld",b2 + c % limit);
+		printf("%ld", b2 + c % limit);
 	}
 
 	printf("\n");
