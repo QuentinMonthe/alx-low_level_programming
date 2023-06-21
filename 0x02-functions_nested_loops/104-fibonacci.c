@@ -22,12 +22,12 @@ int main(void)
 			c = b;
 		} else
 		{
+			c = a + b;
 			a = b;
 			b = c;
-			c = a + b;
 		}
 		printf("%ld, ", c);
 	}
-	printf("%ld\n", b + c);
+	printf("%ld\n", a + b);
 	return (0);
 }
