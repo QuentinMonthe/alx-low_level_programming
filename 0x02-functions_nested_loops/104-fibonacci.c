@@ -12,7 +12,7 @@ int main(void)
 	int i;
 	unsigned long a = 1, b = 2, c, j1, j2, k1, k2;
 
-	printf("%d");
+	printf("%ld", a);
 	for (i = 1; i < 91; i++)
 	{
 		if (i == 1)
@@ -27,10 +27,10 @@ int main(void)
 		printf(", %ld", c);
 	}
 	
-	j1 = j / 1000000000;
-	j2 = j % 1000000000;
-	k1 = k / 1000000000;
-	k2 = k % 1000000000;
+	j1 = b / 1000000000;
+	j2 = b % 1000000000;
+	k1 = a / 1000000000;
+	k2 = a % 1000000000;
 
 	for (i = 91; i < 97; ++i)
 	{
