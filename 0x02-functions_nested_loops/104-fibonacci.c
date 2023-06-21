@@ -36,11 +36,11 @@ int main(void)
 	for (i = 80; i < 97; ++i)
 	{
 		c = b2 + a2;
-		b1 = b1 + a1 + c / limit;
-		b2 = c % limit;
-		a1 = b1 - a1 - c / limit;
+		b1 = b1 + a1;
+		b2 = c;
+		a1 = b1 - a1;
 		a2 = c - a2;
-		printf(", %ld%ld", b1, b2);
+		printf(", %ld%ld", b1 + c / limit, b2 + c % limit);
 	}
 
 	printf("\n");
