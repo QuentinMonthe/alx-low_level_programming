@@ -1,26 +1,26 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * jack_bauer - This program prints every minute
- * of the day of Jack Bauer
+ * main - This program prints the first 50 Fibonacci numbers
  *
- * Return: Nothing
+ * Return: Alwals 0 (Success)
  */
 
-void jack_bauer(void)
+int main(void)
 {
-	int h, m;
+	int i, fib[50];
 
-	for (h = 0; h < 24; h++)
+	fib[0] = 1;
+	fib[1] = 2;
+	for (i = 0; i < 49; i++)
 	{
-		for (m = 0; m < 60; m++)
+		if (i >= 2)
 		{
-			_putchar((h / 10) + 48);
-			_putchar((h % 10) + 48);
-			_putchar(58);
-			_putchar((m / 10) + 48);
-			_putchar((m % 10) + 48);
-			_putchar('\n');
+			fib[i] = fib[i - 1] + fib[i - 2];
 		}
+		printf("%d, ", fib[i]);
 	}
+	printf("%d\n", fib[47] + fib[48];
+	return (0);
 }
