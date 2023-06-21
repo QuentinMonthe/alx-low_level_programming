@@ -10,14 +10,12 @@
 int main(void)
 {
 	int i;
-	unsigned long a = 1, b = 2, c;
+	unsigned long a = 1, b = 2, c, j1, j2, k1, k2;
 
-	for (i = 0; i < 97; i++)
+	printf("%d");
+	for (i = 1; i < 91; i++)
 	{
-		if (i == 0)
-		{
-			c = a;
-		} else if (i == 1)
+		if (i == 1)
 		{
 			c = b;
 		} else
@@ -26,8 +24,25 @@ int main(void)
 			a = b;
 			b = c;
 		}
-		printf("%ld, ", c);
+		printf(", %ld", c);
 	}
-	printf("%ld\n", a + b);
+	
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+
+	for (i = 91; i < 97; ++i)
+	{
+		printf(", %ld", k1 + (k2 / 1000000000));
+		printf("%ld", k2 % 1000000000);
+		k1 = k1 + j1;
+		j1 = k1 - j1;
+		k2 = k2 + j2;
+		j2 = k2 - j2;
+	}
+
+	printf("\n");
+
 	return (0);
 }
