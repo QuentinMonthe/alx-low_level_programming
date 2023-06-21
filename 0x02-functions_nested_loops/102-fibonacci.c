@@ -9,7 +9,8 @@
 
 int main(void)
 {
-	int i, fib[50];
+	int i;
+	long long fib[50];
 
 	fib[0] = 1;
 	fib[1] = 2;
@@ -19,8 +20,8 @@ int main(void)
 		{
 			fib[i] = fib[i - 1] + fib[i - 2];
 		}
-		printf("%d, ", fib[i]);
+		printf("%lld, ", fib[i]);
 	}
-	printf("%d\n", fib[47] + fib[48]);
+	printf("%lld\n", fib[47] + fib[48]);
 	return (0);
 }
