@@ -10,19 +10,20 @@
 int main(void)
 {
 	int i;
-	int sum = 0;
+	int sum3 = 0;
+	int sum5 = 0;
 
 	for (i = 2; i < 1024; i++)
 	{
 		if (i % 3 == 0)
 		{
-			sum += i;
+			sum3 += i;
 		}
 		if (i % 5 == 0)
 		{
-			sum += i;
+			sum5 += i;
 		}
 	}
-	printf("%d\n", sum);
+	printf("%d\n", sum3 + sum5);
 	return (0);
 }
