@@ -20,7 +20,7 @@ void puts_half(char *str)
 
 	if (length_of_the_string % 2 == 0)
 	{
-		n = length_of_the_string / 2;
+		n = length_of_the_string / 2 + 1;
 	} else
 		n = (length_of_the_string - 1) / 2;
 
