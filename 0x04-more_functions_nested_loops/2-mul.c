@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isdigit - This program multiplies two integers
+ * mul - This program multiplies two integers
  * @a: first number
  * @b: second number
  *
