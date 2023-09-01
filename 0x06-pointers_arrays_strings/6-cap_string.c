@@ -20,6 +20,12 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
+		if (i == 0 && (str[i + 1] > 96 && str[i + 1] < 123))
+		{
+			str[i + 1] = str[i + 1] - 32;
+			i += 2;
+		}
+
 		if (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
 				|| str[i] == ',' || str[i] == ';' || str[i] == '.'
 				|| str[i] == '!' || str[i] == '?' || str[i] == 34
@@ -29,9 +35,11 @@ char *cap_string(char *str)
 			if (str[i + 1] > 96 && str[i + 1] < 123)
 			{
 				str[i + 1] = str[i + 1] - 32;
-			}
-		}
-		i++;
+				i += 2;
+			} else
+				i++;
+		} else
+			i++;
 	}
 
 	return (str);
