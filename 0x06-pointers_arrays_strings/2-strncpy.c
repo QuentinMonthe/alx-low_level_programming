@@ -20,13 +20,15 @@ char *_strncpy(char *dest, char *src, int n)
 		return (dest);
 	}
 
-	while (i < n)
+	while (i < n && src[i] != '\0')
 	{
 		*(dest + i) = src[i];
-		if (src[i] == '\0')
-		{
-			break;
-		}
+		i++;
+	}
+
+	while (i < n)
+	{
+		*(dest + i) = '\0';
 		i++;
 	}
 
