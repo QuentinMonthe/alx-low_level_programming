@@ -13,6 +13,11 @@ char *cap_string(char *str)
 {
 	int i = 0;
 
+	if (str == NULL)
+	{
+		return (str);
+	}
+
 	while (str[i] != '\0')
 	{
 		if (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
