@@ -4,9 +4,8 @@
 
 /**
  * reverse_array - This function reverses the content of
- * an array of integers.
- * @a: array of integers
- * @s2: number of elements of the array
+ * @a: array of integers.
+ * @n: number of integers
  *
  * Return: Nothing
  */
