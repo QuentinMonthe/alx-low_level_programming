@@ -20,10 +20,10 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (i == 0 && (str[i + 1] > 96 && str[i + 1] < 123))
+		if (i == 0 && (str[i] > 96 && str[i] < 123))
 		{
-			str[i + 1] = str[i + 1] - 32;
-			i += 2;
+			str[i] = str[i] - 32;
+			i++;
 		}
 
 		if (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
