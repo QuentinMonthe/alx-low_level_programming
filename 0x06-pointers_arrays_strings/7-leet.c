@@ -11,32 +11,22 @@
 
 char *leet(char *str)
 {
-	int i = 0;
+	int i = 0, j = 0;
+	char *lower = "aeotl";
+	char *upper = "AEOTL";
+	char *encode = "43071";
 
 	while (str[i] != '\0')
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		for (j = 0; j < 5; j++)
 		{
-			str[i] = '4';
-			i++;
-		} else if (str[i] == 'e' || str[i] == 'E')
-                {
-                        str[i] = '3';
-                        i++;
-                } else if (str[i] == 'o' || str[i] == 'O')
-                {
-                        str[i] = '0';
-                        i++;
-                } else if (str[i] == 't' || str[i] == 'T')
-                {
-                        str[i] = '7';
-                        i++;
-                } else if (str[i] == 'l' || str[i] == 'L')
-                {
-                        str[i] = '1';
-                        i++;
-                } else
-			i++;
+			if (str[i] == lower[j] || str[i] == upper[j])
+			{
+				str[i] = encode[j];
+				break;
+			}
+		}
+		i++;
 	}
 
 	return (str);
