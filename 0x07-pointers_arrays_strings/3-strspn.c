@@ -38,11 +38,11 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				start = i;
 				res = 0;
-			} else if (res == (i - start))
+			} else if (res != (i - start))
 			{
-				return (res);
-			} else
 				res = 0;
+			} else
+				return (res);
 		}
 		i++;
 	}
