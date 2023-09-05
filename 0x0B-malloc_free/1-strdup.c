@@ -12,9 +12,7 @@
 unsigned int str_length(char *str)
 {
 	if (*str == '\0')
-	{
 		return (0);
-	}
 
 	return (1 + str_length(str + 1));
 }
@@ -28,7 +26,7 @@ unsigned int str_length(char *str)
 
 char *_strdup(char *str)
 {
-	char *arr = NULL;
+	char *arr;
 	unsigned int i, size;
 
 	if (str == NULL)
@@ -36,7 +34,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	size = str_length(str);
+	size = str_length(str) + 1;
 	arr = malloc(sizeof(char) * size);
 
 	if (arr == NULL)
