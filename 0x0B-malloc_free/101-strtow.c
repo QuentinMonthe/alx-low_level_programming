@@ -70,7 +70,7 @@ char **strtow(char *str)
 		if (str[j] != 32)
 		{
 			len = str_length(str + j);
-			words[i] = (char *) malloc(sizeof(char) * len);
+			words[i] = (char *) malloc(sizeof(char) * (len + 1));
 			if (words[i] == NULL)
 			{
 				for (k = 0; k < i; k++)
@@ -84,6 +84,7 @@ char **strtow(char *str)
 			{
 				words[i][k] = str[j + k];
 			}
+			words[i][len] = '\0';
 			i++;
 			j = j + len;
 		} else
