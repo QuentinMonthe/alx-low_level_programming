@@ -55,12 +55,12 @@ char **strtow(char *str)
 	char **words = NULL;
 	int len, k, i = 0, j = 0, size = 0;
 
-	if (str == NULL || (*str == 32 && str[1] == '\0') || *str == '\0')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	size = num_word(str);
 	words = (char **) malloc(sizeof(char *) * (size + 1));
-	if (words == NULL)
+	if (words == NULL || size == 0)
 		return (NULL);
 	for (k = 0; k <= size; k++)
 		words[k] = NULL;
