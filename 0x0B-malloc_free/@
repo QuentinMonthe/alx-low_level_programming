@@ -87,7 +87,7 @@ char **strtow(char *str)
 			i++;
 			j += len;
 		}
-		j = str[j] != '\0' ? j + 1 : j;
+		j++;
 	}
 
 	return (words);
