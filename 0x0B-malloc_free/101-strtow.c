@@ -85,9 +85,9 @@ char **strtow(char *str)
 				words[i][k] = str[j + k];
 			}
 			i++;
-			j += len;
-		}
-		j = str[j] != '\0' ? j + 1 : j;
+			j = j + len;
+		} else
+			j++;
 	}
 
 	return (words);
