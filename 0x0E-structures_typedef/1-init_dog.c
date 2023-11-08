@@ -46,8 +46,6 @@ char *_str_cpy(char *str1, char *str2)
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d = malloc(sizeof(struct dog));
-
 	if (d != NULL)
 	{
 		d->name = _str_cpy(d->name, name);
