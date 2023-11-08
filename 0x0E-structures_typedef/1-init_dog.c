@@ -14,14 +14,15 @@ char *_str_cpy(char *str1, char *str2)
 	int i = 0;
 
 	if (str2 == NULL)
-		return (NULL);
+		str = NULL;
+		return (str);
 
 	str1 = malloc(sizeof(str2));
 
 	if (str1 == NULL)
 		return (NULL);
 
-	while(*(str2 + i) != '\0')
+	while (*(str2 + i) != '\0')
 	{
 		*(str1 + i) = *(str2 + i);
 			i++;
