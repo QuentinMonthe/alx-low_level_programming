@@ -3,34 +3,31 @@
 #include <stdlib.h>
 
 /**
- * _str_cpy - this function copy the string
- * @str1: string location copy
- * @str2: string to copy
+ * _str_dup - this function copy the string
+ * @s: string to copy
  *
  * Return: string (Success), NULL if not.
  */
-char *_str_cpy(char *str1, char *str2)
+char *_str_dup(char *s)
 {
 	int i = 0;
+	char *str;
 
-	if (str2 == NULL)
-	{
-		str1 = NULL;
-		return (str1);
-	}
-
-	str1 = malloc(sizeof(str2));
-	if (str1 == NULL)
+	if (s == NULL)
 		return (NULL);
 
-	while (*(str2 + i) != '\0')
-	{
-		*(str1 + i) = *(str2 + i);
-			i++;
-	}
-	*(str1 + i) = *(str2 + i);
+	str = malloc(sizeof(s));
+	if (str == NULL)
+		return (NULL);
 
-	return (str1);
+	while (*(s + i) != '\0')
+	{
+		*(str + i) = *(s + i);
+		i++;
+	}
+	*(str + i) = '\0';
+
+	return (str);
 }
 
 
@@ -44,28 +41,28 @@ char *_str_cpy(char *str1, char *str2)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *d;
+	struct dog *ddog;
 
-	d = malloc(sizeof(struct dog));
-	if (d == NULL)
+	ddog = malloc(sizeof(struct dog));
+	if (ddog == NULL)
 		return (NULL);
 
-	d->name = _str_cpy(d->name, name);
-	if (d->name != name)
+	ddog->name = _str_dup(name);
+	if (name != NULL && ddog->name == NULL)
 	{
-		free(d);
+		free(ddog);
 		return (NULL);
 	}
 
-	d->age = age;
+	ddog->age = age;
 
-	d->owner = _str_cpy(d->owner, owner);
-	if (d->owner != owner)
+	ddog->owner = _str_dup(owner);
+	if (owner != NULL && ddog->owner == NULL)
 	{
-		free(d->name);
-		free(d);
+		free(ddog->name);
+		free(ddog);
 		return (NULL);
 	}
 
-	return (d);
+	return (ddog);
 }
