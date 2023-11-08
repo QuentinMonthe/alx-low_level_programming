@@ -4,13 +4,15 @@
 
 /**
  * main - check the code
+ * @argc: count argument parameter
+ * @argv: vector argument parameter
  *
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	char * op;
+	char *op;
 	int (*f)(int a, int b);
 
 	if (argc != 4)
@@ -21,7 +23,8 @@ int main(int argc, char *argv[])
 
 	op = argv[2];
 
-	if (*op != '+' && *op != '-' && *op != '*' && *op != '/' && *op != '%')
+	if ((*op != '+' && *op != '-' && *op != '*' && *op != '/' && *op != '%')
+			|| *(op + 1) != '\0')
 	{
 		printf("Error\n");
 		exit(99);
