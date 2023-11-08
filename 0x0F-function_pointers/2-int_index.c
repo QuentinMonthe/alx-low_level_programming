@@ -6,13 +6,13 @@
  * int_index - this funtion searches for an integer
  * @array: array of element
  * @size: size of array
- * @action: function to compare element
+ * @cmp: function to compare element
  *
- * Return: Nothing.
+ * Return: index of element find or -1 if not match.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i = 0;
+	int i = 0;
 
 	if (array != NULL && size > 0 && cmp != NULL)
 	{
