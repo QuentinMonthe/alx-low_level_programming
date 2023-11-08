@@ -46,21 +46,20 @@ char *_str_cpy(char *str1, char *str2)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
-		
-	d = (dog_t *) malloc(sizeof(dog_t));
 
+	d = (dog_t *) malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
-	
+
 	d->name = _str_cpy(d->name, name);
-	if (d->name == NULL)
+	if (d->name != name)
 	{
 		free(d);
 		return (NULL);
 	}
 
 	d->owner = _str_cpy(d->owner, owner);
-	if (d->owner == NULL)
+	if (d->owner != owner)
 	{
 		free(d->name);
 		free(d);
