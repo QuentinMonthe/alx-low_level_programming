@@ -10,17 +10,23 @@
  */
 char *_str_dup(char *s)
 {
-	int i = 0;
+	int i = 0, len = 0;
 	char *str;
 
 	if (s == NULL)
 		return (NULL);
 
-	str = malloc(sizeof(s));
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	len++;
+
+	str = malloc(sizeof(char) * len);
 	if (str == NULL)
 		return (NULL);
 
-	while (*(s + i) != '\0')
+	while (i < len)
 	{
 		*(str + i) = *(s + i);
 		i++;
