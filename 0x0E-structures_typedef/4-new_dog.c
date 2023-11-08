@@ -20,7 +20,6 @@ char *_str_cpy(char *str1, char *str2)
 	}
 
 	str1 = malloc(sizeof(str2));
-
 	if (str1 == NULL)
 		return (NULL);
 
@@ -29,7 +28,7 @@ char *_str_cpy(char *str1, char *str2)
 		*(str1 + i) = *(str2 + i);
 			i++;
 	}
-	*(str1 + i) = '\0';
+	*(str1 + i) = *(str2 + i);
 
 	return (str1);
 }
@@ -45,9 +44,9 @@ char *_str_cpy(char *str1, char *str2)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	struct dog *d;
 
-	d = (dog_t *) malloc(sizeof(dog_t));
+	d = malloc(sizeof(struct dog));
 	if (d == NULL)
 		return (NULL);
 
@@ -58,6 +57,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
+	d->age = age;
+
 	d->owner = _str_cpy(d->owner, owner);
 	if (d->owner != owner)
 	{
@@ -65,8 +66,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-
-	d->age = age;
 
 	return (d);
 }
