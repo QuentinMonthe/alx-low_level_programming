@@ -23,16 +23,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (str == NULL)
 			str = nil;
 
-		if (i < (n - 1))
+		printf("%s", str);
+		if (i < (n - 1) && separator != NULL)
 		{
-			if (separator != NULL)
-			{
-				printf("%s%s", str, separator);
-			} else
-				printf("%s", str);
-		} else
-			printf("%s\n", str);
+			printf("%s", separator);
+		}
 	}
 
+	printf("\n");
 	va_end(argp);
 }
