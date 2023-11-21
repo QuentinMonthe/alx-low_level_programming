@@ -4,6 +4,7 @@
 /**
  * print_opcodes - this function prints opcodes of main function
  * @bytes: number bytes
+ * @f: pointer to main
  *
  * Return: Nothing
  */
@@ -26,7 +27,7 @@ void print_opcodes(int bytes, int (*f)(int, char **))
 		if (i != bytes - 1)
 		{
 			printf(" ");
-		} else 
+		} else
 			printf("\n");
 	}
 }
