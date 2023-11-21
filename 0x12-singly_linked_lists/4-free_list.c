@@ -4,6 +4,7 @@
 
 /**
  * free_list - this function frees a list
+ * @head: head of list
  *
  * Return: Nothing.
  */
