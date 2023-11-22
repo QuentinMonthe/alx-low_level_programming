@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * add_nodent_end - this function adds a new nodes at the end of a list
+ * add_nodint_end - this function adds a new nodes at the end of a list
  * @head: pointeri to head of list
  * @n: value of new node
  *
