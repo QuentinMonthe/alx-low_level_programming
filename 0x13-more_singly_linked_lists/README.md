@@ -1,0 +1,1 @@
+This is the README.md directory for the project 0x12-more_singly_linked_lists
